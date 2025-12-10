@@ -39,7 +39,7 @@ def main() -> None:
     Render the Streamlit UI and execute show commands based on user input.
     """
 
-    st.title("EIA Cisco Client Discovery – get_showcmds GUI")
+    st.title("EIA Cisco Client Discovery GUI")
     st.write(
         "This is a Streamlit-based front end for running the same discovery "
         "workflow as get_showcmds.py."
@@ -51,6 +51,7 @@ def main() -> None:
         caption="EIA Network Automation",
         width=250,
     )
+    st.sidebar.markdown("🏠 [eianow.com](https://eianow.com)")
 
     dotenv.load_dotenv(verbose=False)
 
