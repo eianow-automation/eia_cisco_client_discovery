@@ -1,0 +1,177 @@
+# Dictionary where key is "ios_show_commands" and value is a list of show commands
+general_show_commands:
+  - term len 0
+  - show run
+  - show version
+  - show cdp neighbors
+  - show inventory
+  - show interface status
+  - dir
+ios_show_commands:
+  - term len 0
+  - show run
+  - show version
+  - show inventory
+  - show cdp nei
+  - show cd nei det
+  - show vlan
+  - show spanning-tree
+  - show spanning-tree root priority system-id
+  - show int
+  - show int status
+  - show int trunk
+  - show ip int br
+  - show ip arp
+  - show mac address-table
+  - show etherchannel sum
+  - show vrf
+  - show ip route
+  - show swi
+  - show swi detail
+  - show power inline
+  - dir
+  - show boot system
+  - show derived-config
+  - show ip ospf interface
+  - show ip ospf neighbor detail
+  - show bgp all neighbors
+  - show bgp all summary
+  - show ip dhcp snooping
+  - show ip dhcp snooping binding
+  - show vrf detail
+  - show ip route vrf *
+  - show ip interface
+  - show ipv6 interface
+  - show ipv6 neighbors
+  - show ipv6 route vrf *
+  - show ip mroute
+  - show license all
+  - show log
+  - show ip device tracking all
+  - show device-tracking database
+  - show device-tracking database details
+  - show interfaces transceiver detail
+  - show env all
+  - show end
+nxos_show_commands:
+  - term len 0
+  - show hostname
+  - show run
+  - show version
+  - show inventory
+  - show cdp neighbors
+  - show cd neighbors detail
+  - show vlan
+  - show spanning-tree
+  - show interface
+  - show interface status
+  - show interface trunk
+  - show ip interface brief
+  - show ip arp
+  - show mac address-table
+  - show port-channel sum
+  - show vrf
+  - show ip route
+  - show logging
+  - show license all
+  - show license
+  - dir
+wlc_show_commands:
+  - config paging disable
+  - show run-config commands
+  - show run-config commands no-ap
+  - show time
+  - show sysinfo
+  - show client state summary
+  - show queue-info
+  - show radius queue summary
+  - show dhcp stats
+  - show arp stats
+  - show arp switch
+  - show coredump summary
+  - show process cpu
+  - show memory summary
+  - show imm chassis fan
+  - show imm chassis temperature
+  - show ap uptime
+  - show ap crash-file
+  - show ap summary
+  - show advanced 802.11a summary
+  - show ap image
+  - show license all
+  - show licenses summary
+  - show client summary
+  - show client summary ssid
+  - show client summary devicetype
+  - show interface summary
+  - show wlan summary
+  - show client ap 802.11a all
+  - show client ap 802.11b all
+  - show client ap 802.11-a49 all
+  - show route summary
+ios_wlc_commands:
+  - term len 0
+  - show run
+  - show inventory
+  - show vlan
+  - show interface
+  - show ip route
+  - show cdp neighbor
+  - show cdp neithbor detail
+  - show ap summary
+  - show wlan summary
+  - show wlan all
+  - show mac address-table
+  - show wireless client summary
+  - show radius server-group all
+pre_post_commands:
+  - term len 0
+  - show run
+  - show ip route
+  - show interface trunk
+  - show spanning-tree
+  - show interface status
+staging_commands:
+  - term len 0
+  - show running-config
+  - show startup-config
+  - show inventory
+  - show int status
+  - show interface
+  - show version
+  - show swi
+  - show swi detail
+  - show swi stack-ports
+  - show swi stack-mode
+  - dir
+  - show boot
+ios_map_show_commands:
+  - term len 0
+  - show run
+  - show version
+  - show inventory
+  - show cdp neighbor
+  - show cdp neighbor detail
+  - show vlan
+  - show spanning-tree
+  - show interface
+  - show interfaces status
+  - show interfaces trunk
+  - show interfaces switchport
+  - show ip interface brief
+  - show ip arp
+  - show mac address-table
+  - show etherchannel summary
+  - show vrf
+  - show ip route vrf *
+  - show ip route
+  - show ip route summary
+  - show ip ospf neighbor
+  - show ip mroute
+  - show ip mroute summary
+  - show switch detail
+  - show switch stack-ports
+  - show switch stack-ports summary
+  - show switch stack-mode
+  - show environment power all
+  - dir
