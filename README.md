@@ -109,8 +109,16 @@ claudia@Claudias-iMac client_discovery % source ./myvenv/bin/activate
 
 With your virtual environment activated, install the requirements for this repository.
 
+**Option 1 - Using pip**
+
 ```
-(client_discovery) claudia@Claudias-iMac bin % pip install -r requirements.txt
+(myvenv) claudia@Claudias-iMac client_discovery % pip install .
+```
+
+**Option 2 - Using uv**
+
+```
+(myvenv) claudia@Claudias-iMac client_discovery % uv pip install .
 ```
 
 
