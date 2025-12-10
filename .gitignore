@@ -14,5 +14,4 @@ ntc-templates
 *myenv
 *venv
 .idea
-
-.snagproj
+*.snagproj
