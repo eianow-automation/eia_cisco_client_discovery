@@ -1,0 +1,7 @@
+[project]
+name = "eia-cisco-client-discovery"
+version = "0.1.0"
+description = "EIA Cisco Client Discovery Utilities"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = []
