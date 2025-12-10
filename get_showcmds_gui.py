@@ -39,6 +39,13 @@ def main() -> None:
     Render the Streamlit UI and execute show commands based on user input.
     """
 
+    # Set page configuration, including favicon shown on the browser tab
+    st.set_page_config(
+        page_title="EIA Cisco Client Discovery GUI",
+        page_icon="images/EIA_Favicon.png",
+        layout="wide",
+    )
+
     st.title("EIA Cisco Client Discovery GUI")
     st.write(
         "This is a Streamlit-based front end for running the same discovery "
