@@ -15,3 +15,4 @@ ntc-templates
 *venv
 .idea
 *.snagproj
+.venv
