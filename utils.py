@@ -34,6 +34,40 @@ def replace_space(text, debug=False):
     return newtext.strip()
 
 
+def build_device_list(single_device, devices_text, debug=False):
+    """
+    Build a list of devices from a single device field and/or a block of text.
+
+    Lines in the devices_text argument that contain non-whitespace characters
+    are treated as devices (IP or FQDN), mirroring the behavior of the
+    --file_of_devs option in get_showcmds.py. Duplicate devices are removed
+    while preserving the original order.
+    """
+
+    device_list = []
+
+    if devices_text:
+        for line in devices_text.splitlines():
+            if re.search(r"\w+", line):
+                device_list.append(line.strip())
+
+    if single_device:
+        device_list.append(single_device.strip())
+
+    # De-duplicate while preserving order
+    seen = set()
+    unique_devices = []
+    for d in device_list:
+        if d not in seen:
+            seen.add(d)
+            unique_devices.append(d)
+
+    if debug:
+        print(f"Built device list ({len(unique_devices)} devices): {unique_devices}")
+
+    return unique_devices
+
+
 def load_env_from_dotenv_file(path):
     """
     Load key/value pairs from a .env file into environment variables, exiting if the file is missing.

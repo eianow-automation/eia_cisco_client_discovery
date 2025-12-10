@@ -2,11 +2,16 @@
 
 
 
-<img src="images/EIALogoFINAL_medium_DarkBackground.png" alt="EIALogoFINAL_medium_DarkBackground.png" style="zoom:50%;" />
+<img src="images/EIALogoFINAL_medium_DarkBackgroundSolid.jpg" alt="EIALogoFINAL_medium_DarkBackground.png" style="zoom:50%;" />
 
 ## Synopsis
 
 Commonly used Netmiko utilities for client discovery.
+
+The tools in this repository can be used in two primary ways:
+
+- **Command-line scripts** (e.g. `python get_showcmds.py` or `uv run get_showcmds.py`)
+- **Streamlit GUI** for `get_showcmds.py` (launched with `streamlit run get_showcmds_gui.py` or `uv run streamlit run get_showcmds_gui.py`)
 
 
 
@@ -257,6 +262,37 @@ Usage: ' python get_showcmds.py -d my_switch_hostname.my.domain'
 
 
 ```
+
+
+### Streamlit GUI for get_showcmds.py
+
+A simple Streamlit GUI is provided to make running `get_showcmds.py` easier, especially when testing against many devices.
+
+You can launch the GUI in two ways:
+
+- **Standard Python** (Streamlit installed in the active environment):
+
+  ```bash
+  streamlit run get_showcmds_gui.py
+  ```
+
+- **Using uv** (recommended if you are managing dependencies with uv):
+
+  ```bash
+  uv run streamlit run get_showcmds_gui.py
+  ```
+
+When you run either command, Streamlit starts a **local web server** (by default on `http://localhost:8501`) and opens a browser tab with a GUI that:
+
+- Lets you enter a single device, paste a list, or upload a text file of devices (one per line).
+- Exposes the same options as the CLI script (device type, port, output subdirectory, show command, note, MFA/credentials).
+- Shows per-device results in expandable sections and a summary of output files or login/connection issues.
+
+Example GUI view:
+
+![get_showcmds Streamlit GUI](images/GUI_2025-12-10_10-42-35.jpg)
+
+All execution happens locally on your machine; Streamlit is only providing a local browser-based user interface.
 
 
 
