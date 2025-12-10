@@ -25,7 +25,8 @@ The tools in this repository can be used in two primary ways:
 
 ---
 
-Tip: Using 'uv` simplifies the creation, use, and management of Python virtual environments.` This repository supports both uv as well as the more traditional convention of running python scripts.
+Tip: Using `uv` simplifies the creation, use, and management of Python virtual environments *and* Python versions. 
+This repository supports both uv as well as the more traditional approach of running python scripts.
 
 If you are new to `uv` and would like a brief introduction, see:
 [Ultra Valuable uv for Dynamic, On-Demand Python Virtual Environments](https://gratuitous-arp.net/dynamic-on-demand-python-venv-or-virtual-environments/)
@@ -37,7 +38,7 @@ If you are new to `uv` and would like a brief introduction, see:
 ##### 1 - Install Python
 
 - Mac
-  - Install with [HomeBrew](https://programwithus.com/learn/python/install-python3-mac)
+  - Install with [HomeBrew](https://programwithus.com/learn/python/install-python3-mac) or install  `uv`
 - Windows
   - [Download Python 3.12.4](https://www.python.org/downloads/)
 
@@ -46,8 +47,6 @@ If you are new to `uv` and would like a brief introduction, see:
 - Go to the [repository on GitHub](https://github.com/eianow-automation/eia_cisco_client_discovery) and click the Code button.
 
 ![clone](images/clone.jpg)
-
-
 
 
 
@@ -152,13 +151,13 @@ In its simplest form, by providing the IP or FQDN of a network device with the *
 
 The script has a variety of option to tailor the script execution.
 
-The ***-o*** or ***--output_subdir*** can be used to save output in a different subdirectory.
+The ***-o*** or ***--output_subdir*** can be used to save output in a different subdirectory.  This is handy if you want up zip up the files.
 
 ##### Credentials
 
 By default the script will load credentials as environment variables from a **.env** file.
 
-The -m option (for Multi Factor Authentication) concatenate a password with an MFA code so as to minimize typing.
+The **-m** option (for Multi Factor Authentication) concatenate a password with an MFA code so as to minimize typing.
 
 The script also supports an option ***-c*** or ***--credentials*** argument which interactively requests the username, password, and enable password to be used.  Passwords are not echoed back and credentials are not saved.
 
