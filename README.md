@@ -18,7 +18,16 @@ Commonly used Netmiko utilities for client discovery.
 4. Activate your virtual environment
 5. Install the required Python Modules for this repository
 
-##### 
+---
+
+Tip: Using 'uv` simplifies the creation, use, and management of Python virtual environments.` This repository supports both uv as well as the more traditional convention of running python scripts.
+
+If you are new to `uv` and would like a brief introduction, see:
+[Ultra Valuable uv for Dynamic, On-Demand Python Virtual Environments](https://gratuitous-arp.net/dynamic-on-demand-python-venv-or-virtual-environments/)
+
+------
+
+
 
 ##### 1 - Install Python
 
@@ -29,7 +38,7 @@ Commonly used Netmiko utilities for client discovery.
 
 ##### 2 - Clone this repository
 
-- Go to the [repository on GitHub](https://github.com/cldeluna/client_discovery) and click the Code button.
+- Go to the [repository on GitHub](https://github.com/eianow-automation/eia_cisco_client_discovery) and click the Code button.
 
 ![clone](images/clone.jpg)
 
@@ -129,6 +138,11 @@ With your virtual environment activated, install the requirements for this repos
 
 #### get_showcmds.py
 
+You can run the scripts in this repository either with standard Python or via `uv`:
+
+- **Standard Python**: `python get_showcmds.py ...`
+- **Using uv**: `uv run get_showcmds.py ...`
+
 In its simplest form, by providing the IP or FQDN of a network device with the ***-d*** option, the script executes the associated set of show commands in the **show_cmds.yml** file on the provided device, and saves the output to a timestamped file.  The output is saved, by default,  in a directory under the current working directory named "local".  
 
 The script has a variety of option to tailor the script execution.
@@ -167,6 +181,7 @@ In this example the **get_showcmds.py** file is executed with
 
 ```
 (client_discovery) claudia@Claudias-iMac client_discovery % python get_showcmds.py -c -s "show ver" -f example_device_file.txt
+(client_discovery) claudia@Claudias-iMac client_discovery % uv run get_showcmds.py -c -s "show ver" -f example_device_file.txt
 ===== Date is 2021-03-12 ====
 Username [claudia]: cisco
 Password and Enable Password will not be echoed to the screen or saved.
@@ -198,8 +213,10 @@ Saving show command output to /Users/claudia/Dropbox (Indigo Wire Networks)/scri
 
 ```
 (client_discovery) claudia@Claudias-iMac client_discovery % cat example_device_file.txt 
-10.1.10.212
-10.1.10.216
+10.1.10.60
+pacific-ds01.uwaco.net
+10.1.10.66
+10.1.10.67
 
 
 ```
@@ -212,6 +229,7 @@ Use the -h option to see the script options.
 
 ```
 (client_discovery) claudia@Claudias-iMac client_discovery % python get_showcmds.py -h
+(client_discovery) claudia@Claudias-iMac client_discovery % uv run get_showcmds.py -h
 usage: get_showcmds.py [-h] [-d DEVICE] [-t DEVICE_TYPE] [-p PORT] [-o OUTPUT_SUBDIR] [-s SHOW_CMD] [-n NOTE] [-m] [-c] [-f FILE_OF_DEVS]
 
 Script Description
@@ -270,6 +288,7 @@ Example if Layer 3 device is not running CDP.
 
 ```
 (client_discovery) claudia@Claudias-iMac client_discovery % python seed_devlist.py ios-xe-mgmt.cisco.com -c -p 8181 
+(client_discovery) claudia@Claudias-iMac client_discovery % uv run seed_devlist.py ios-xe-mgmt.cisco.com -c -p 8181 
 ========== Date is 2021-03-13 =========
 Username [claudia]: root
 Password and Enable Password will not be echoed to the screen or saved.
